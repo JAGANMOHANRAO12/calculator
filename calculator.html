@@ -1,0 +1,49 @@
+<html>
+
+<head></head>
+
+<body>
+   <h1>Calculator</h1>
+   <div class="places">
+      <input id="value1" />
+   </div>
+   <br />
+   <div class="places">
+      <input id="value2" />
+   </div>
+   <div class="places">
+      <button onclick="add()">+</button>
+      <button onclick="sub()">-</button>
+      <button onclick="mul()">*</button>
+      <button onclick="div()">/</button>
+   </div>
+   <h3 id="result"></h3>
+   <div>
+      <button onclick="reset()">Reset</button>
+   </div>
+   <script>
+      var val1 = document.getElementById("value1");
+      var val2 = document.getElementById("value2");
+      var result = document.getElementById("result");
+      function add() {
+         result.innerHTML = parseInt(val1.value) + parseInt(val2.value);
+      }
+      function sub() {
+         result.innerHTML = parseInt(val1.value) - parseInt(val2.value);
+      }
+      function mul() {
+         result.innerHTML = parseInt(val1.value) * parseInt(val2.value);
+      }
+      function div() {
+         result.innerHTML = parseInt(val1.value) / parseInt(val2.value);
+      }
+      function reset() {
+         val1.value = "";
+         val2.value = "";
+         result.innerHTML = "";
+      }
+
+   </script>
+</body>
+
+</html>
